@@ -56,12 +56,14 @@ group :all_the_stuff, halt_on_fail: true do
     watch(/.*\.scss$/)
   end
 
-  # Update browser
-  guard 'livereload' do
-    watch(%r{^spec/javascripts/(.*)\.js})
-    watch(%r{^spec/javascripts/(.*)\.html})
-    watch(%r{^public/(.*)\.js})
-    watch(%r{^public/(.*)\.css})
-    watch(%r{^public/(.*)\.html})
+  # Update browser during development
+  if ENV['RACK_ENV'] != 'production'
+    guard 'livereload' do
+      watch(%r{^spec/javascripts/(.*)\.js})
+      watch(%r{^spec/javascripts/(.*)\.html})
+      watch(%r{^public/(.*)\.js})
+      watch(%r{^public/(.*)\.css})
+      watch(%r{^public/(.*)\.html})
+    end
   end
 end
