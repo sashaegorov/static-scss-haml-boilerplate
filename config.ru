@@ -1,5 +1,3 @@
-require 'securerandom'
-
 class BoilerPlate
   def initialize
     @app = Rack::Builder.new do
@@ -40,7 +38,7 @@ if ENV['RACK_ENV'] == 'production'
     {ENV['RACK_USER'] => ENV['RACK_PASSWORD']}[user]
   end
   secure.realm = 'Please enter password'
-  secure.opaque = SecureRandom.hex
+  secure.opaque = ENV['RACK_OPAQUE']
   run secure
 else
   run BoilerPlate.new

@@ -55,6 +55,7 @@ Here is the list related environment variables.
 - **`RACK_ENV`** Rack-environment to run application, default is *development*. Other possible options are `test` and `production`.
 - **`RACK_USER`** user name for simple authentication
 - **`RACK_PASSWORD`** user name for simple authentication
+- **`RACK_OPAQUE`** needs to be set to a constant base64/hexadecimal string e.g. `ruby -r securerandom -e 'puts SecureRandom.hex'`
 - **`PUMA_WORKERS`** number of workers, default is *2*
 - **`PUMA_THREADS_MIN`** *minimal* number of threads per worker, default is *2*
 - **`PUMA_THREADS_MAX`** *maximal* number of threads per worker, default is *4*
@@ -65,7 +66,7 @@ Here is the list related environment variables.
 This thing is Heroku-ready, which means you can just `git push heroku master` it to your application and it's done.
 
 **Check list:**
-- Add `RACK_USER` and `RACK_PASSWORD` variables
+- Add `RACK_USER`, `RACK_OPAQUE` and `RACK_PASSWORD` variables
 
 # Project structure
 Here is the directory structure:
