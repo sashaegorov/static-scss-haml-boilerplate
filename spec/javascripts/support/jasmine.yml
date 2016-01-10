@@ -1,6 +1,7 @@
 src_files:
   - /lib/js/jquery.min.js
   - /lib/js/foundation.min.js
+  # - /tmp/...
 
 helpers:
   - 'helpers/**/*.js'

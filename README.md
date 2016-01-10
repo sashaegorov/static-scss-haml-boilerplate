@@ -19,7 +19,7 @@ Yes. This is boiler plate for damn fast static prototyping.
 # How to work with this?
 
 ## Work with CoffeeScript
-Just add it to `src/js` and save, result will apper in `public/js`. That is it. Sub-directories are supported i.e. `src/js/demo/demo.coffee` will be `public/js/demo/demo.coffee`.
+Just add it to `src/js` and save, result will appear in `tmp/js`. That is it. Sub-directories are supported i.e. `src/js/demo/demo.coffee` will be `tmp/js/demo/demo.coffee`.
 
 ## Work with SCSS
 TODO: Yay!
@@ -70,7 +70,7 @@ Here is the directory structure:
 `│  ├── css/` — shared stylesheets
 `│  ├── fonts/` — fonts
 `│  └── js/` — shared scripts
-**`├─ public`** — served compiled stuff, it's **NOT** tracked by Git
+**`├─ tmp`** — served compiled stuff, it's **NOT** tracked by Git
 `│  ├── css`
 `│  └── js`
 **`├─ spec`** — Jasmine stuff

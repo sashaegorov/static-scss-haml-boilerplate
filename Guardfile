@@ -3,7 +3,7 @@
 coffee_options_src = {
   # Check more options here:
   # https://github.com/guard/guard-coffeescript
-  input: 'src', output: 'public',
+  input: 'src', output: 'tmp',
   patterns: [%r{^src/(.+\.(?:coffee|coffee\.md|litcoffee))$}],
   all_on_start: true,   # run all on start
   shallow: false,       # create nested output directories
@@ -32,7 +32,7 @@ group :all_the_stuff, halt_on_fail: true do
   # /*__TEST_ONLY_SECTION_STARTS__ */ and /*__TEST_ONLY_SECTION_ENDS__ */
   # and write it to file without `.dev` suffix
   # guard :shell do
-  #   watch(%r{^public/.*\.dev\.js}) do |m|
+  #   watch(%r{^tmp/.*\.dev\.js}) do |m|
   #     out = m[0].sub '.dev.js', '.js'
   #     `sed '/__TEST_ONLY_SECTION_STARTS__/,/__TEST_ONLY_SECTION_ENDS__/d' #{m[0]} > #{out}`
   #   end
@@ -40,12 +40,12 @@ group :all_the_stuff, halt_on_fail: true do
 
   # Uglify main JavaScript file
   guard 'uglify',
-        input: './public/js/main.js',
-        output: './public/js/main.min.js'
+        input: './tmp/js/main.js',
+        output: './tmp/js/main.min.js'
 
   # Compile Haml
   guard :haml, notifications: true, run_at_start: true,
-    input: 'src', output: 'public' do
+    input: 'src', output: 'tmp' do
     watch(/^.+(\.haml)$/)
   end
 
@@ -61,9 +61,9 @@ group :all_the_stuff, halt_on_fail: true do
     guard 'livereload' do
       watch(%r{^spec/javascripts/(.*)\.js})
       watch(%r{^spec/javascripts/(.*)\.html})
-      watch(%r{^public/(.*)\.js})
-      watch(%r{^public/(.*)\.css})
-      watch(%r{^public/(.*)\.html})
+      watch(%r{^tmp/(.*)\.js})
+      watch(%r{^tmp/(.*)\.css})
+      watch(%r{^tmp/(.*)\.html})
     end
   end
 end

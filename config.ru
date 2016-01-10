@@ -6,7 +6,7 @@ map '/' do
   use Rack::LiveReload, no_swf: true, min_delay: 0, max_delay: 50
   # Rack::Static middleware
   # http://www.rubydoc.info/github/rack/rack/Rack/Static
-  use Rack::Static, urls: [''], root: './public', index: 'index.html'
+  use Rack::Static, urls: [''], root: './tmp', index: 'index.html'
   run lambda { |*| }
 end
 

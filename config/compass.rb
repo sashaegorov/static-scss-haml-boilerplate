@@ -8,7 +8,7 @@ add_import_path File.join(
 
 environment = ENV['RACK_ENV'] || :development
 sass_dir = './src/scss'  # Input directory
-css_dir = './public/css' # Output directory
+css_dir = './tmp/css' # Output directory
 
 sourcemap = true
 output_style = :nested
