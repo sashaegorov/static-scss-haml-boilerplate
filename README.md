@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/sashaegorov/static-scss-haml-boilerplate.svg)](https://gemnasium.com/sashaegorov/static-scss-haml-boilerplate)
+
 **NOTE:** This `README.md` is in progress. Sorry for typos.
 
 # About this project
