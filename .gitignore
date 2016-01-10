@@ -1,3 +1,7 @@
+# All rendered
+public/*
+!public/.gitkeep
+
 # There is no reason to track this...
 Gemfile.lock
 
