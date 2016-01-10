@@ -11,8 +11,8 @@ group :production do
 end
 
 group :development, :test do
-  gem 'compass'
   gem 'rack-livereload'
+  gem 'compass'
   gem 'guard-compass'
   gem 'guard-uglify'
   gem 'guard-coffeescript'

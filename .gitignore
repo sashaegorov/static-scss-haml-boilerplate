@@ -1,6 +1,5 @@
-# All rendered
-public/*
-!public/.gitkeep
+# Skip source maps
+public/**/*.map
 
 # Mac stuff
 .DS_Store

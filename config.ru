@@ -1,10 +1,10 @@
-# Require and configure LiveReload for static content server
-require 'rack-livereload'
-map '/' do
-  # Rack::LiveReload middleware
+# Skip some stuff if we are in production
+production = ENV['RACK_ENV'] == 'production'
+require 'rack-livereload' unless production
 
-  use Rack::LiveReload, no_swf: true, min_delay: 0, max_delay: 50
-  # Rack::Static middleware
+map '/' do
+  use Rack::LiveReload, no_swf: true,
+    min_delay: 0, max_delay: 50 unless production
   # http://www.rubydoc.info/github/rack/rack/Rack/Static
   use Rack::Static, urls: [''], root: './public', index: 'index.html'
   run lambda { |*| }
