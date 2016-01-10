@@ -3,6 +3,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-foundation-sites', '6.1.1'
 end
 
+ruby '2.2.3'
+
 source 'https://rubygems.org'
 gem 'compass'
 gem 'guard-compass'
