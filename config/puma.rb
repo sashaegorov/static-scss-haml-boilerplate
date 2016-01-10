@@ -13,9 +13,9 @@ daemonize false
 rackup DefaultRackup
 environment ENV['RACK_ENV'] || 'development'
 
-workers Integer(ENV['PUMA_WORKERS'] || 2)
-threads_count_min = Integer(ENV['PUMA_THREADS_MIN'] || 2)
-threads_count_max = Integer(ENV['PUMA_THREADS_MAX'] || 4)
+workers Integer(ENV['PUMA_WORKERS'] || 1)
+threads_count_min = Integer(ENV['PUMA_THREADS_MIN'] || 1)
+threads_count_max = Integer(ENV['PUMA_THREADS_MAX'] || 1)
 threads threads_count_min, threads_count_max
 
 # `PORT` variable is Heroku default
