@@ -8,6 +8,7 @@ end
 
 group :production do
   gem 'puma'
+  gem 'rack-livereload'
 end
 
 group :development, :test do
@@ -19,7 +20,6 @@ group :development, :test do
   gem 'guard-haml'
   gem 'haml_lint' # optional, however highly recommended
   gem 'guard-shell'
-  gem 'rack-livereload'
   gem 'jasmine', '~> 2.4'
   gem 'foreman'
 end
