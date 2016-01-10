@@ -11,18 +11,18 @@ describe 'Dummy tests', ->
 
   beforeAll ->
     jasmine.getFixtures().fixturesPath = '.'
-    jasmine.getFixtures().preload 'tmp/index.html'
+    jasmine.getFixtures().preload 'public/index.html'
     jasmine.getStyleFixtures().fixturesPath = '.'
     jasmine.getStyleFixtures().preload 'lib/css/foundation.min.css',
-      'tmp/css/main.css'
+      'public/css/main.css'
 
   afterAll ->
     jasmine.getFixtures().clearCache()
 
   beforeEach (done) ->
-    jasmine.getFixtures().load 'tmp/index.html'
+    jasmine.getFixtures().load 'public/index.html'
     jasmine.getStyleFixtures().load 'lib/css/foundation.min.css',
-      'tmp/css/main.css'
+      'public/css/main.css'
     done()
 
   afterEach (done) ->

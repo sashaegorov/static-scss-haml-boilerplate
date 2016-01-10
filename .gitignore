@@ -1,6 +1,6 @@
 # All rendered
-# tmp/*
-!tmp/.gitkeep
+public/*
+!public/.gitkeep
 
 # Mac stuff
 .DS_Store

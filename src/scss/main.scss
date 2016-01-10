@@ -12,6 +12,20 @@ code {
   border-radius: 3px;
 }
 
+.accordion-item.is-active {
+  .accordion-title {
+    background-color: $dark-grey;
+  }
+}
+
+.accordion-title {
+  font-size: 1.25rem;
+
+  &::before {
+    content: '';
+  }
+}
+
 .fi-heart {
   color: #e74c3c;
 }

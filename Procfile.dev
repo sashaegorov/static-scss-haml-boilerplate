@@ -1,4 +1,4 @@
-# Guard render necessary files to `tmp`:
+# Guard render necessary files to `public`:
 guard: bundle exec guard
 # Run web-server
 web: bundle exec puma --config config/puma.rb
