@@ -7,19 +7,19 @@ source 'https://rails-assets.org' do
 end
 
 group :production do
-  gem 'puma'
+  gem 'foreman'
   gem 'rack-livereload'
-end
-
-group :development, :test do
+  gem 'puma'
   gem 'compass'
   gem 'guard-compass'
   gem 'guard-uglify'
   gem 'guard-coffeescript'
   gem 'guard-livereload'
   gem 'guard-haml'
-  gem 'haml_lint' # optional, however highly recommended
   gem 'guard-shell'
+end
+
+group :development, :test do
+  gem 'haml_lint' # optional, however highly recommended
   gem 'jasmine', '~> 2.4'
-  gem 'foreman'
 end
