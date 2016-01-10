@@ -1,3 +1,23 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [About this project](#about-this-project)
+	- [Features](#features)
+- [How to work with this?](#how-to-work-with-this)
+	- [Work with CoffeeScript](#work-with-coffeescript)
+	- [Work with SCSS](#work-with-scss)
+- [How to start local development?](#how-to-start-local-development)
+	- [Ruby](#ruby)
+	- [Bundler](#bundler)
+	- [Running Foreman](#running-foreman)
+	- [`Puma` web-server variables](#puma-web-server-variables)
+- [Heroku](#heroku)
+- [Project structure](#project-structure)
+- [TODOs](#todos)
+- [Contribute](#contribute)
+- [Demo](#demo)
+
+<!-- /TOC -->
+
 [![Dependency Status](https://gemnasium.com/sashaegorov/static-scss-haml-boilerplate.svg)](https://gemnasium.com/sashaegorov/static-scss-haml-boilerplate)
 
 **NOTE:** This `README.md` is in progress. Sorry for typos.
