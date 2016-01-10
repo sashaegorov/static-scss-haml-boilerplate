@@ -30,11 +30,11 @@ Here are steps to run local development environment.
 Please note all steps assume your are running all commands from repository folder.
 
 ## Ruby
-You will need Ruby interpreter version `2.2.3`. Refer to your operating system manuals. It also recommended to use either `rvm` or `rbenv` to manage your Rubies locally.
+You will need Ruby interpreter version `2.2.4`. Refer to your operating system manuals. It also recommended to use either `rvm` or `rbenv` to manage your Rubies locally.
 
 ##  Bundler
 This project uses `bundler` to manage Ruby dependencies.
-In order to install it just fire up `gem instal bundler`. After run `bundle install` to get rest of things.
+In order to install it just fire up `gem install bundler`. After run `bundle install` to get rest of things.
 
 **NOTE:** During executing bundle install on Mac you may get following error:
 ```
