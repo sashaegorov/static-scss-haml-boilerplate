@@ -1,6 +1,5 @@
 **NOTE:** This `README.md` is in progress. Sorry for typos.
 
-
 # About this project
 `SCSS`/`Haml`/`Coffescript` boilerplate for static pages served by Rack!
 Yes. This is boiler plate for damn fast static prototyping.
@@ -100,3 +99,6 @@ To be done in near future:
 There are some stuff which, should be updated periodically:
 - `Foundation 6` which is places in `lib/css` and `lib/js` folders
 - `jasmine-jquery` which inside `spec/javascripts/helpers/jasmine-jquery.js`
+
+# Demo
+Try it [here](https://static-scss-haml-boilerplate.herokuapp.com/) with `admin:a633e579f476` login and password.
