@@ -1,21 +1,13 @@
 prune_bundler
 
-unless ENV['PUMA_USE_PRELOAD'].nil?
-  preload_app!
-  # This will fail without preloaded application
-  on_worker_boot do
-    ActiveRecord::Base.establish_connection
-  end
-end
-
 daemonize false
 
 rackup DefaultRackup
 environment ENV['RACK_ENV'] || 'development'
 
-workers Integer(ENV['PUMA_WORKERS'] || 1)
-threads_count_min = Integer(ENV['PUMA_THREADS_MIN'] || 1)
-threads_count_max = Integer(ENV['PUMA_THREADS_MAX'] || 1)
+workers Integer(ENV['PUMA_WORKERS'] || 8)
+threads_count_min = Integer(ENV['PUMA_THREADS_MIN'] || 8)
+threads_count_max = Integer(ENV['PUMA_THREADS_MAX'] || 8)
 threads threads_count_min, threads_count_max
 
 # `PORT` variable is Heroku default
